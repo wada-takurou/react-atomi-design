@@ -1,3 +1,4 @@
+import { UserProvider } from "./providers/UserProvider";
 import { Router } from "./router/Router";
 import "./styles.css";
 
@@ -13,5 +14,9 @@ const user = {
 };
 
 export default function App() {
-  return <Router />;
+  return (
+    <UserProvider>
+      <Router />
+    </UserProvider>
+  );
 }
