@@ -1,3 +1,4 @@
+import { RecoilRoot } from "recoil";
 import { UserProvider } from "./providers/UserProvider";
 import { Router } from "./router/Router";
 import "./styles.css";
@@ -15,8 +16,10 @@ const user = {
 
 export default function App() {
   return (
-    <UserProvider>
-      <Router />
-    </UserProvider>
+    <RecoilRoot>
+      <UserProvider>
+        <Router />
+      </UserProvider>
+    </RecoilRoot>
   );
 }
